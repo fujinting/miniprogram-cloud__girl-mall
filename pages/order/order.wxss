@@ -1,0 +1,100 @@
+.order{
+  width:100%;
+}
+
+.tabs{
+ padding: 0 !important;
+ float: left !important;
+}
+.tab{
+  width: 137rpx !important;
+  font-size:30rpx !important;
+}
+.tab-act{
+  color:#ff5777 !important;
+}
+.all{
+  /* width: 100%; */
+  padding: 0 10rpx;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+.all .all-item{
+  margin-top: 20rpx;
+  width: 96%;
+  background-color: white;
+  margin-bottom: 30rpx;
+  padding: 30rpx 15rpx 30rpx 15rpx;
+  border-radius: 6rpx;
+  display: flex;
+  flex-direction: column;
+}
+.all-item .a{
+  margin-top: 20rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 200rpx;
+}
+.a .a_a{
+  width: 20%;
+  height: auto;
+}
+.a .a_b{
+  width: 62%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+}
+.a .a_b .a_b_a{
+  font-size: 32rpx;
+  margin-top: 10rpx;
+}
+.a .a_b .a_b_b{
+  font-size: 28rpx;
+  margin-top: 30rpx;
+  color: gray;
+}
+
+.a .a_c{
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+.a .a_c .a_c_a{
+  margin-top: 10rpx;
+  text-align: center;
+  font-weight: 700;
+  font-size: 40rpx;
+}
+.a .a_c .a_c_b{
+  margin-top: 70rpx;
+  text-align: center;
+  color: red;
+  font-size: 40rpx;
+
+}
+.all-item .b{
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 40rpx;
+  font-weight: 700;
+}
+.all-item .c{
+  margin-top: 50rpx;
+  width: 100%;
+ 
+}
+.all-item .c button{
+ float: right;
+ background-color: #ff5777;
+ border-radius: 50rpx;
+ color: white;
+}
+.all-item .c button::after{
+  border: none;
+}
+
+
+

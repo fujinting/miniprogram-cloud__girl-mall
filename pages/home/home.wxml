@@ -1,0 +1,45 @@
+
+<!-- 轮播图 -->
+<swiper class='swiper' circular autoplay interval='3000' duration='300' indicator-dots indicator-active-color='#ff5777'>
+	<block wx:for="{{banners}}" wx:key="{{index}}">
+		<swiper-item class="swiper-item">
+			<navigator url="{{item.url}}">
+				<image src="{{item.src}}" mode="widthFix" />
+			</navigator>
+
+		</swiper-item>
+	</block>
+</swiper>
+<van-notice-bar
+  left-icon="volume-o"
+  text="流行抢先一步，这个夏天我最酷，来点不一样的，快快下单吧！"
+	color="#ff5777"
+	backgroundColor="whitesmoke"
+/>
+<!-- 本周流行 -->
+<view class="popular">
+	<image src="/assets/home/popular_bg.jpg" />
+</view>
+
+<!--今日推荐 -->
+<text class="recommend_title">今日推荐</text>
+
+<view class="goods">
+	<view class="goods_item" wx:for="{{commends}}" wx:key="{{index}}">
+			<navigator url="../detail/detail?id={{item._id}}">
+					<image class="image" src="{{item.srcs[0]}}" mode="widthFix"></image>
+					<wxs src="../../utils/filter.wxs" module="filter" />
+					<view class="text">
+							<label>{{filter.ellipsis(item.name)}}</label>
+							<view class="a">
+								<view class="price">
+										￥{{item.price}}
+								</view>	
+								<view class="num">
+										销量{{item.num}}
+								</view>
+							</view>
+					</view>
+			</navigator>
+	</view>
+</view>

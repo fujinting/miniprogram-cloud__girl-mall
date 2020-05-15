@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index"
+  },
+  "navigationBarTitleText": "金廷商城"
+
+}

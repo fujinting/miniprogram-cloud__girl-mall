@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "van-notice-bar": "@vant/weapp/notice-bar/index"
+  },
+  "navigationBarTitleText": "首页",
+  "navigationBarTextStyle": "white"
+}

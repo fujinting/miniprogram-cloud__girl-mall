@@ -1,0 +1,57 @@
+/* 轮播图 */
+swiper{
+  width: 100%;
+}
+swiper image{
+  width: 100%;
+}
+
+/* 本周流行 */
+.popular image{
+  width: 100%;
+}
+
+/* 今日推荐 */
+.recommend_title{
+  margin-left:300rpx;
+}
+.goods{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+}
+
+.goods .goods_item{
+  width: 48%;
+  margin-top: 16rpx;
+  position: relative;
+  border: 1rpx solid whitesmoke;
+  background-color: white;
+}
+.goods .goods_item .image{
+  width: 100%;
+}
+.goods .goods_item .text{
+  padding: 10rpx 10rpx;
+}
+.goods .goods_item .text label{
+  font-size: 26rpx;
+}
+.goods .goods_item .text .a{
+  margin-top: 15rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.goods .goods_item .text .price{
+  color: red;
+  font-size: 30rpx;
+}
+.goods .goods_item .text .num{
+    font-size: 22rpx;
+    color: gray;
+    margin-top: 5rpx;
+}

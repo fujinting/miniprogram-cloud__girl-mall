@@ -1,0 +1,146 @@
+
+.pay{
+  width: 100%;
+  padding: 10rpx;
+  background-color: whitesmoke;
+}
+/* 地址 */
+.pay .address{
+  margin-top: 20rpx;
+  width: 95%;
+  padding: 30rpx 10rpx;
+  border-bottom: 1rpx solid pink;
+  background-color: #fff;
+}
+.or{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.a{
+  color: gray;
+}
+
+.address_1{
+  display: flex;
+  flex-direction: row;
+  
+  justify-content: space-between;
+}
+.address_1 .c{
+  padding-top: 8rpx;
+  font-size: 26rpx;
+}
+.address_2{
+  margin-top: 10rpx;
+  color: gray;
+  font-size: 25rpx;
+}
+
+/* 商品信息 */
+.goods_detail{
+  margin-top: 20rpx;
+  
+  background-color: white;
+  width: 95%;
+  display: flex;
+  flex-direction: row;
+  padding:20rpx 10rpx;
+}
+.goods_detail image{
+  width: 130rpx;
+  height: 170rpx;
+}
+.goods_detail .d{
+  width: 63%;
+  margin-left: 15rpx;
+  font-size: 29rpx;
+
+}
+.goods_detail .d .d_cs{
+  margin-top: 60rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+.goods_detail .e{
+  width: 20%;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.goods_detail .e .e_price{
+  font-weight: 700;
+  font-size: 40rpx;
+}
+.goods_detail .e .e_num{
+  margin-top: 70rpx;
+  color: red;
+  font-size: 50rpx;
+}
+.methods{
+  padding:35rpx 10rpx 15px 10rpx;
+  margin-top: 20rpx;
+  height:60rpx;
+  width: 95%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+
+/* 留言 */
+.add_content{
+  width: 95%;
+  background-color: white;
+  margin-top: 20rpx;
+  padding:20rpx 10rpx;
+}
+.add_textarea{
+  margin-top: 25rpx;
+  border: 1rpx solid rgb(240, 231, 231);
+  padding: 20rpx;
+  width: 95%;
+  background-color:#fffdfd;
+  color: grey;
+
+
+}
+
+/* 价格合计 */
+.all-price{
+  width: 95%;
+  margin-top: 20rpx;
+  background-color: white;
+  padding: 20rpx 10rpx;
+  display: flex;
+  flex-direction: column;
+}
+.all-price .i{
+ 
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 20rpx;
+}
+.all-price .k{
+  border-top: 4rpx solid whitesmoke;
+  padding-top: 20rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 20rpx;
+}
+.all-price .k .K_allprice{ 
+  color: red;
+  font-size: 45rpx;
+  margin-top: 3rpx;
+
+}
+
+
+

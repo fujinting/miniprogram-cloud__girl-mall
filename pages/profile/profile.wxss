@@ -1,0 +1,136 @@
+.profile{
+  width: 100%;
+  background-color: whitesmoke;
+  padding: 0 10rpx;
+  height: 100vh;
+}
+
+.profile .mydetail{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 25rpx 10rpx;
+
+}
+
+.mydetail image{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+ .mydetail .b{
+  margin-top: 15rpx;
+  margin-left: 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+.mydetail .b .ad{
+  margin-top: 15rpx;
+  font-size: 35rpx;
+  color: gray;
+}
+
+.profile .unlogin{
+  background-color: white;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 25rpx 10rpx;
+}
+
+
+.unlogin button{
+  margin-top: 25rpx;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  float: left;
+  margin:0;
+  padding: 0; 
+
+}
+.unlogin button::after{
+  border: none;
+} 
+.unlogin button .btn_txt{
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.unlogin button .yay{
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.pro_status {
+  padding: 25rpx 0;
+  margin-top: 30rpx;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+ 
+}
+.pro_status .c{
+ 
+  display:flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 28rpx;
+}
+.pro_status .c text{
+  margin-top: 8rpx;
+}
+.pro_status image{
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+
+
+.all_setting{
+  padding: 25rpx 0;
+  margin-top: 30rpx;
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 150rpx;
+}
+.all_setting image{
+  margin-left: 10rpx;
+  width: 60rpx;
+  height: 60rpx;
+}
+.all_setting .d{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+}
+
+
+.all_setting button{
+  display: flex;
+  flex-direction: column;
+  font-size: 28rpx;
+  border: none;
+  width: 180rpx;
+  height: 150rpx;
+  background-color: white;
+  
+}
+.all_setting button::after{
+  border: none;
+}
+.all_setting .d .d_t{
+  margin-top: 16rpx;
+}
+
+
+
+

@@ -1,0 +1,90 @@
+
+<view class="profile">
+   
+
+<!-- 个人信息 -->
+<!-- 1. 登录状态 -->
+   <view class="mydetail" wx:if="{{openid}}">
+        <view class="a">         
+              <image src="{{user.avatarUrl}}"></image>
+        </view>
+        <view class="b" >        
+            <view>{{user.nickName}}</view>
+            <view class="ad">{{user.province}}·{{user.city}}</view>
+       </view>         
+   </view>
+
+
+<!-- 2. 未登录状态 -->
+   <view class="unlogin" wx:if="{{!openid}}">
+        <button wx:if="{{canIUse}}"  lang='zh_CN' open-type="getUserInfo"               bindgetuserinfo="bindGetUserInfo">
+                <image class="yay" src="../../assets/profile/nologin.png"></image>
+                <view class="btn_txt"> 点击登录</view>
+          </button>
+       <view wx:else>请升级微信版本</view>
+   </view>
+      
+
+
+<!-- 个人商品状态 -->
+
+<view class="pro_status">
+      <view class="c">
+          <image src="../../assets/profile/pay.png"></image>
+          <text>待付款</text>
+      </view>
+      <view class="c">
+          <image src="../../assets/profile/dg.png"></image> 
+          <text>待发货</text>
+      </view>
+      <view class="c">
+         <image src="../../assets/profile/rec.png"></image>
+         <text>待收货</text>
+      </view>
+      <view class="c"> 
+            <image src="../../assets/profile/eva.png"></image>
+            <text>待评价</text>
+      </view>
+      <view class="c" bindtap="allOrder">
+          <image src="../../assets/profile/all.png"></image>
+          <text>全部订单</text>
+      </view>
+</view>
+
+<!-- 1退款，反馈 ，客服，1设置，-->
+<view class="all_setting">
+    <view class="d" bindtap="refund">
+        <van-icon name="refund-o" color="#837e7a" size="60rpx" />
+        <text class="d_t">退款退货</text>
+    </view>
+
+    <view class="d" bindtap="tellBug">
+        <van-icon name="records"  color="#837e7a" size="60rpx"/>
+        <text class="d_t">bug反馈</text>
+    </view>
+
+    <view open-type="contact" class="d">
+        <button open-type="contact">
+            <van-icon name="contact"  color="#837e7a" size="60rpx" />
+            <text>帮助/客服</text>
+        </button>      
+    </view>
+
+     <view class="d">
+        <van-icon name="setting-o"   color="#837e7a" size="60rpx" />
+        <text  class="d_t">设置</text>
+    </view>
+</view>
+
+
+
+
+
+
+   
+
+</view>
+
+
+
+

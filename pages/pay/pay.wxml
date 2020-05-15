@@ -1,0 +1,93 @@
+<view class="pay">
+<!-- 收货地址 -->
+  <view bindtap="address" class="address">
+     
+      <view class="or" hidden="{{or}}">
+         <van-icon name="location-o"  color="gray" /> 
+         <view class="a"> 请点击添加地址</view>
+         <van-icon name="arrow" color="gray" /> 
+      </view>
+
+      <view class="address_1" hidden="{{and}}">
+          <view class="b">  
+                收货人：{{username}}
+          </view>
+          <view class="c">{{phone_number}}</view>
+      </view>
+      <view class="address_2">{{address}}</view>
+  </view>
+
+<!-- 商品信息 -->
+<view class="goods_detail" wx:for="{{product}}" wx:key="{{index}}">
+     <image src="{{item.product_src}}"></image>
+     <view class="d">
+          <view>{{item.product_name}}</view>
+          <view class="d_cs">颜色:{{item.product_color}}、 尺码:{{item.product_size}}</view>
+     </view>
+    <view class="e">
+        <view class="e_price">¥{{item.product_price}}</view>
+        <view class="e_num">X{{item.product_num}}</view>
+    </view> 
+</view>
+
+<!-- 配送方式 -->
+<view class="methods">
+    <view class="f"> 配送方式</view>
+    <view class="g">普通快递 免运费</view>
+</view>
+  
+<!-- 买家留言 -->
+ <view class="add_content">
+    <text class="h">买家留言</text>
+    <textarea class="add_textarea" bindinput="remark" auto-height
+     placeholder="请填写您的备注信息" placeholder-style="color:gainsboro;">
+
+    </textarea>
+</view>
+
+<!--总计 -->
+<view class="all-price">
+    
+
+    <view class="i">
+        <view>运费</view>
+        <view>商家包邮</view>
+     </view>
+
+    <view class="k"> 
+        <view>共计：</view>
+        <view class="K_allprice">¥{{allPrice}}</view>
+    </view>
+
+
+    <view class="x">
+       <text>\n</text>
+       <text>\n</text>
+	   <text>\n</text>
+       
+    </view>
+</view>
+
+
+
+
+
+
+
+<van-submit-bar
+  
+  price="{{allPrice*100}}"
+  button-text="提交订单"
+  bind:submit="allPay"
+/>
+
+
+
+
+
+
+
+
+
+</view>
+

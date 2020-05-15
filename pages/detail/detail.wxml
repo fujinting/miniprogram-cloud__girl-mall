@@ -1,0 +1,119 @@
+
+<!-- 轮播图 -->
+<view class="wrap">
+    <swiper class='swiper' 
+        circular autoplay interval='5000'
+        duration='500' >
+      <swiper-item class="swiper-item" wx:for="{{srcs}}">
+        <image src="{{item}}" mode="widthFix" />
+      </swiper-item>
+    </swiper>
+</view>
+
+<view class="detail_info">
+
+<!-- 价格和销售数量 -->
+   <view class="detail_title">{{name}}</view>
+   <view class="a">
+        <view class="price">¥{{price}}</view>
+        <view class="num">已售{{num}}件</view>
+   </view>
+
+<!-- 选择商品规格 -->
+   <view class="spec">
+      <view class="spec_a" bindtap="specShow">
+         {{newcolor || newsize?'商品规格已选为：'+newcolor+'、  '+newsize+'、  '+newnum+'件':'请点击选择商品规格'}}
+      </view>
+      <view class="spec_b" hidden="{{show}}">
+          <view class="spec_b_box">
+                <view class="d">
+                      <view>颜色·尺码·数量</view>
+                          <view bindtap="closeShow" class="ee">
+                              <van-icon name="cross" size="50rpx" />
+                          </view>                   
+                </view>
+                <view class="box_a"> 
+                    <image src="{{srcs[0]}}"></image>
+                    <view class="box_a_text" >¥{{price}}</view>
+                </view>
+                <!-- 颜色 -->
+                <view class="box_b">
+                      <view style="color:grey">颜色</view>
+                      <view class="box_b_detail">
+                            <view class="e {{index===colornum?'active':''}}"
+                             wx:for="{{colors}}" wx:key="{{index}}"
+                             data-name="{{item}}"
+                             data-num="{{index}}"
+                             bindtap="chooseColor">
+                            {{item}}
+                            </view>
+                      </view>
+                </view>
+
+                <!-- 尺码 -->
+                 <view class="box_b">
+                      <view style="color:grey">尺码</view>
+                      <view class="box_b_detail">
+                            <view class="e {{index===sizenum?'active':''}}" 
+                            wx:for="{{sizes}}" wx:key="{{index}}"
+                             data-name="{{item}}"
+                             data-num="{{index}}"
+                             bindtap="chooseSize"
+                            >
+                            {{item}}
+                            </view>
+                      </view>
+                </view>
+
+              <!-- 数量 -->
+               <view class="box_b">
+                      <view style="color:grey">数量</view>
+                      <view class="box_b_detail">
+                           <van-stepper value="{{ 1 }}" 
+                           integer 
+                           bind:change="onChange"  
+                            min="1" max="15"
+                            input-width="108rpx" button-size="86.4rpx" />
+                      </view>
+                </view>
+              
+              <view class="box_f">
+                  <button class="f_surespc" bindtap="submitSpc">确认规格</button>
+                 
+              </view>
+
+          </view>
+     </view>
+   </view>
+
+<!-- 商品详情 -->
+   <view class="detail_img_detail">
+        <view class="b">商品详情</view>
+        <block wx:for="{{srcs}}" wx:key="index">
+            <image src="{{item}}" mode="widthFix" ></image>
+        </block>
+   </view>
+</view>
+
+
+<!-- 底部加入和购物车和立即购买 -->
+<view class="footer">
+    <van-goods-action>
+      <van-goods-action-icon icon="chat-o" text="客服" open-type="contact" dot />
+      <van-goods-action-icon icon="cart-o" text="购物车" bindtap="toCart" info="{{cartnum}}" />
+      <van-goods-action-button
+        text="加入购物车"
+        bindtap="addCart"
+        color="#ff5777"
+      />
+      <van-goods-action-button
+
+        text="立即购买"
+        bindtap="submitBuy"
+         color="red"
+      />
+    </van-goods-action>
+</view>
+
+
+

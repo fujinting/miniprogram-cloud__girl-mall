@@ -1,0 +1,50 @@
+
+<view class="cart_goods">
+
+
+	<view class="cart_goods_item" wx:for="{{cart_goods}}" wx:key="{{index}}">		
+			<view class="a" catchtap='catchtap'>
+					 		<checkbox-group bindchange="choose" data-id="{{item._id}}" data-num="{{item.product_num}}" data-price="{{item.product_price}}">
+									<checkbox class="checkbox" value="{{item._id}}" checked="{{item.product_checked}}">
+							</checkbox>
+							</checkbox-group>	
+		  </view>	
+			<navigator class="b"  url="../detail/detail?id={{item.product_id}}">	
+					<image class="image" src="{{item.product_src}}" ></image>
+					<view class="cart_goods_text">			
+							<label class="cart_goods_name">{{item.product_name}}</label>
+							<label class="cart_goods_spc">颜色:{{item.product_color}}、尺码:{{item.product_size}}</label>
+							<label class="cart_goods_num">X{{item.product_num}}</label>
+					</view>
+			</navigator>
+			<view class="cart_goods_p_r">
+							<text class="price">¥{{item.product_price}}</text>
+
+							<van-icon bindtap="removeOrder"
+							 data-id="{{item._id}}" data-openid="{{item._openid}}" 
+							 data-num="{{item.product_num}}" data-price="{{item.product_price}}"
+							 class="delete" size="60rpx" name="delete" color="#ff5777"/>
+			</view>
+		
+					
+          
+	</view>
+
+	
+	<view style="background-color:white;">
+		<text>\n</text>
+		<text>\n</text>
+		<text>\n</text>
+	</view>
+
+
+	<view class="footer">
+		<view class="footer_allprice">
+			<view class="k">合计：</view>	
+			<view class="l">¥{{allprice}}</view>	
+		
+		</view>
+		<view class="topay" bindtap="toPay">去结算</view>
+	
+	</view>
+</view>

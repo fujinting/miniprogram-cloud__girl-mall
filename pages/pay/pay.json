@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-icon": "@vant/weapp/icon/index",
+    "van-submit-bar": "@vant/weapp/submit-bar/index",
+    "van-toast": "@vant/weapp/toast/index"
+  },
+  "navigationBarTitleText": "支付页面"
+
+}

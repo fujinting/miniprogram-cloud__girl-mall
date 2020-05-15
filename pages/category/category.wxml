@@ -1,0 +1,33 @@
+<view class="category"> 
+  <view class="category_left">
+   
+      <block wx:for='{{categories}}' wx:key='item'>
+          <view data-name="{{item.category}}"
+                data-num="{{index}}" 
+                bindtap="get_category" 
+                class="category_left_item {{index==num?'active':''}}"
+                
+               >
+             {{item.category}}
+          </view> 
+      </block>
+  </view>
+  <view class="line"></view>
+  <scroll-view class="category_right" scroll-y="true">
+     <block wx:for="{{goods}}" wx:key="item._id">
+        <view class="category_right_detail">
+              <navigator url="../detail/detail?id={{item._id}}">
+                      <view class="a">{{item.name}}</view>
+                      <view class="b">
+                            <image class="pic" src="{{item.srcs[0]}}"></image>
+                            <view class="c">仅售:{{item.price}}元</view>
+                      
+                      </view>
+                     
+              </navigator>       
+        </view>     
+     </block>
+  </scroll-view>
+</view>
+
+

@@ -1,0 +1,52 @@
+<view class="order">
+      <van-tabs active="{{ active }}"  bind:change="onChange" nav-class="tabs"  animated color="#ff5777" tab-class="tab" tab-active-class="tab-act">
+      <van-tab title="全部订单"  title-style="">
+            <view class="all">
+                <view class="all-item" wx:for="{{alltwo}}" wx:key="index">
+
+                    <view class="a">
+                       <image class="a_a" src="{{item.product_src}}"></image>
+                       <view class="a_b"> 
+                            <view class="a_b_a">{{item.product_name}}</view>
+                            <view class="a_b_b">
+                                颜色：{{item.product_color}}、
+                                尺寸：{{item.product_size}}
+                            </view>
+                       </view>
+                       <view class="a_c">
+                             <view class="a_c_a">¥{{item.product_price}}</view>
+                             <view class="a_c_b">X{{item.product_num}}</view>
+                       </view>
+                    </view>
+
+                    <view class="b"> 
+                        总金额：{{item.product_price*item.product_num}}元
+                    </view>
+
+                    <view class="c">
+                        <button size="mini" data-id="{{item._id}}" bindtap="removeOrder">删除订单</button>
+                    </view>
+                   
+                </view>
+            </view>
+            
+      </van-tab>
+
+      <van-tab title="待付款"  title-style="">
+      
+      </van-tab>
+
+      <van-tab title="待发货"  title-style="">
+      
+      </van-tab>
+
+      <van-tab title="待收货"  title-style="">
+      
+      </van-tab>
+
+      <van-tab title="待评价"  title-style="">
+      
+      </van-tab>
+    </van-tabs>
+</view>
+
